@@ -10,18 +10,14 @@ window.onload = function(){
   //lisan nuppudele kuularid
 
   document.getElementById('to_inch').addEventListener('click', convertToInch);
-  document.getElementById('to_cm').addEventListener('click', convertToCm);
+  document.getElementById('to_cm').addEventListener('click', function(){
+    cm.value = inch.value*2.54;
+  });
 
 };
 
 function convertToInch(){
 
   inch.value = cm.value/2.54;
-
-}
-
-function convertToCm(){
-
-  cm.value = inch.value*2.54;
 
 }
