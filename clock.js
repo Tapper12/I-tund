@@ -2,8 +2,14 @@
 window.onload = function(){
 
   var clock = document.getElementById('clock');
-
+  //Et ei oleks näha 00:00:00
   writeDate();
+
+  //Käivitan intervalli-500ms = 0.5 sek
+  window.setInterval(function(){
+    //Iga 500ms tagant refresh põhimõtteliselt
+    writeDate();
+  }, 500);
 
 };
 // Võtab aja ja kirjutab clock elemendi sisse
